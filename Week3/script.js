@@ -18,6 +18,7 @@ function createLlElement(title){
 	li.innerText = title;
 	return li;
 }
+
 console.log(getBookIds(book_titles).innerHTML);
 //document.getElementsByTagName('body')[0].appendChild(getBookIds(book_titles));
 

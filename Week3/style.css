@@ -45,4 +45,4 @@ li:hover {
 	display:inline-block;
 	margin-left:10px;
 }
-.book_details span{color:#f68445;}
+.book_details .label{color:#f68445;}

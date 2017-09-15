@@ -7,14 +7,18 @@ let  book_titles = ["hamlet" , "the_adventures_of_huckleberry_finn" , "one_hundr
 /** 3.Make a function that generate a ul with li elements for each book ID in the array using a for loop. **/
 function getBookIds(ids_arr){
 	let ul = document.createElement('ul');
-	for(let i=0; i< ids_arr.length ; i++){
-		let li = document.createElement('li');
-		li.innerHTML = ids_arr[i];
+	for(let i=0; i< ids_arr.length ; i++){	
+		let li = createLlElement(ids_arr[i]);
 		ul.appendChild(li);
 	}
 	return ul;
 }
-//console.log(getBookIds(book_titles).innerHTML);
+function createLlElement(title){
+	let li = document.createElement('li');
+	li.innerText = title;
+	return li;
+}
+console.log(getBookIds(book_titles).innerHTML);
 //document.getElementsByTagName('body')[0].appendChild(getBookIds(book_titles));
 
 /** 4.Make an object containing information for each book. Each item (object) in this object should have the book ID you thought up in point 1 as a key, and it should have at least the following fields: title, language and author. **/
